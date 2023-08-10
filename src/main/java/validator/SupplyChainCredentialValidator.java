@@ -71,10 +71,11 @@ import data.persist.certificate.PlatformCredential;
 //import hirs.data.persist.FirmwareInfo;
 //import hirs.data.persist.NetworkInfo;
 import hirs.data.persist.AppraisalStatus;
+import hirs.data.persist.ArchivableEntity;
 //import hirs.data.persist.DeviceInfoReport;
 //import hirs.data.persist.HardwareInfo;
 //import hirs.data.persist.OSInfo;
-import hirs.data.persist.ComponentInfo;
+import hirs.data.persist.info.ComponentInfo;
 import hirs.data.persist.SupplyChainValidation;
 import hirs.data.persist.certificate.Certificate;
 import hirs.data.persist.certificate.EndorsementCredential;
@@ -859,7 +860,7 @@ public final class SupplyChainCredentialValidator implements CredentialValidator
         });
 
         String ciSerial;
-        List<Certificate> certificateList = null;
+        List<ArchivableEntity> certificateList = null;
         SupplyChainValidation scv = null;
         resultMessage.append("There are errors with Delta "
                     + "Component Statuses components:\n");
